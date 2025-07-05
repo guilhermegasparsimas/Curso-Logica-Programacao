@@ -1,0 +1,17 @@
+.container-copia{
+    min-height: 100vh;
+
+    padding: 20px;
+    margin: 25px;
+    border-radius: 10px;
+    border: 2px solid var(--cor-4);
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
