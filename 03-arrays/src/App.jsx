@@ -8,6 +8,7 @@ function App() {
 
   const [min, setMin] = useState([])
   const [max, setMax] = useState([])
+  const [med, setMed] = useState()
 
   const [estado, setEstado] = useState()
 
@@ -17,6 +18,7 @@ function App() {
     // Math.floor() arredonda pra baixo                 (floor = piso)
     let tempMin = min
     let tempMax = max
+    let tempMed = med
 
     for(let i=0; i<30; i++){
 
@@ -32,12 +34,17 @@ function App() {
         tempMax.push(n2)
         tempMin.push(n1)
       }
-  
-  
+
     }
+
+    let media = Number(min) + Number(max) / 2
+    setMed(media)
     
+    console.log(med)
     console.table(tempMin)
     console.table(tempMax)
+
+    setMed(tempMed)
     setMax(tempMax)
     setMin(tempMin)
     }
@@ -51,6 +58,9 @@ function App() {
   return (
     <>
       <button onClick={gerar}>gerar número</button>
+      <div>
+        {med}
+      </div>
       
     </>
   )
