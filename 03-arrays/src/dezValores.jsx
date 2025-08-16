@@ -2,31 +2,17 @@ import React from 'react'
 import { useState } from 'react'
 
 function dezValores() {
+    const [contador, setContador] = useState(0)
 
-    const [valor] = useState([1,2,3,4,5,6,7,8,9,10]);
-    const [valorInvertido, setValorInvertido] = useState([]);
 
-    const converterIndices= () => {
-        const novoVetor = [];
-
-        for(i=0; i < valor; i++){
-            novoVetor[i] = valor[valor.length -1 -i];
-        }
-        setValorInvertido(novoVetor);
+    const incrementar = (contador) => {
+        setContador(contador++)
     }
 
   return (
     <>
-    <h2>Vetor Original</h2>
-    <p>{valor.join(', ')}</p>     
-    <button onClick={converterIndices}>Inverter Indices</button>
-
-    {valor.length > 0 && (
-        <>
-            <h1>Vetor com índices invertidos</h1>
-            <p>{valorInvertido.join(', ')}</p>
-        </>
-    )}
+    <p>Valor: {contador}</p>
+    <button onClick={incrementar}></button> 
     </>
   )
 }
