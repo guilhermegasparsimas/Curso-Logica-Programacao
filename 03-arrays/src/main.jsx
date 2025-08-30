@@ -7,7 +7,7 @@ import dezValores from './dezValores.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    <VetorComponent />
+    <App />
+    {/* <VetorComponent /> */}
   </StrictMode>
 )

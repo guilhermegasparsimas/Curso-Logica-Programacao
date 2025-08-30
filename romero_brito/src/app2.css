@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    gap: 20px;
+}
+
+.card{
+    list-style-type: none;
+    display: grid;
+    background-color: red;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card li{
+    background-color: white;
+    color: black;
+}
+
+.tableHRow {
+    display: flex;
+    gap: 1rem;
+}
